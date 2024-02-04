@@ -29,9 +29,7 @@ public:
         
         juce::Rectangle<float> dialArea (rx, ry, diameter, diameter);
         
-        //g.setColour(juce::Colours::black); //Sets colour of the dial fill
-        //g.setColour(juce::Colour::fromFloatRGBA (0.0f, 0.0f, 0.0f, 1.0f));
-        g.setColour(juce::Colour(0xff6D97F2));
+        g.setColour(juce::Colour(0xff6D97F2)); //Sets colour of the dial fill
         g.fillEllipse(dialArea);
         
         g.setColour(juce::Colours::white);

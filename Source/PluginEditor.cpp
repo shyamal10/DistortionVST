@@ -52,12 +52,16 @@ DistortionVSTAudioProcessorEditor::~DistortionVSTAudioProcessorEditor()
 //==============================================================================
 void DistortionVSTAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll(juce::Colour(0x5F28282B));
+    g.fillAll(juce::Colour(0xFF28282B));
     
-    g.drawText("Drive", ((getWidth() / 5) * 1) - (100/ 2 ), (getHeight() / 2) + 10, 100, 100, juce::Justification::centred, false);
-    g.drawText("Range", ((getWidth() / 5) * 2) - (100/ 2 ), (getHeight() / 2) + 10, 100, 100, juce::Justification::centred, false);
-    g.drawText("Mix", ((getWidth() / 5) * 3) - (100/ 2 ), (getHeight() / 2) + 10, 100, 100, juce::Justification::centred, false);
-    g.drawText("Volume", ((getWidth() / 5) * 4) - (100/ 2 ), (getHeight() / 2) + 10, 100, 100, juce::Justification::centred, false);
+    g.setColour(juce::Colours::whitesmoke);
+    g.setFont(juce::Font("Avenir Next Condensed", 20.f, 1));
+    
+    //Set labels
+    g.drawText("Drive", ((getWidth() / 5) * 1) - (100/ 2 ), (getHeight() / 2) + 15, 100, 100, juce::Justification::centred, false);
+    g.drawText("Range", ((getWidth() / 5) * 2) - (100/ 2 ), (getHeight() / 2) + 15, 100, 100, juce::Justification::centred, false);
+    g.drawText("Mix", ((getWidth() / 5) * 3) - (100/ 2 ), (getHeight() / 2) + 15, 100, 100, juce::Justification::centred, false);
+    g.drawText("Volume", ((getWidth() / 5) * 4) - (100/ 2 ), (getHeight() / 2) + 15, 100, 100, juce::Justification::centred, false);
 
     
 }
@@ -65,7 +69,7 @@ void DistortionVSTAudioProcessorEditor::paint (juce::Graphics& g)
 void DistortionVSTAudioProcessorEditor::resized()
 {
     auto componentSize = 100;
-    
+    // Layout components
     driveKnob.setBounds(((getWidth() / 5) * 1) - (componentSize/ 2 ), (getHeight() / 2) - (componentSize / 2), componentSize, componentSize);
     rangeKnob.setBounds(((getWidth() / 5) * 2) - (componentSize/ 2 ), (getHeight() / 2) - (componentSize / 2), componentSize, componentSize);
     mixKnob.setBounds(((getWidth() / 5) * 3) - (componentSize/ 2 ), (getHeight() / 2) - (componentSize / 2), componentSize, componentSize);

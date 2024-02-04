@@ -200,7 +200,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout DistortionVSTAudioProcessor:
     
     params.push_back (std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"drive", 1}, "Drive", 0.f, 1.f, 0.01f));
     params.push_back (std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"range", 1}, "Range", 0.f, 2000.f, 0.01f));
-    params.push_back (std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"mix", 1}, "Mix", 0.f, 1.f, 0.01f));
+    params.push_back (std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"mix", 1}, "Mix", 0.f, 1.f, 1.f));
     params.push_back (std::make_unique<juce::AudioParameterFloat>(juce::ParameterID{"volume", 1}, "Volume", 0.f, 1.f, 0.01f));
 
     return {params.begin(), params.end()};
