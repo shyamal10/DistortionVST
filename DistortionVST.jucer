@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="gSfLPs" name="DistortionVST" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Shyam LLC"
+              pluginVST3Category="Distortion">
   <MAINGROUP id="cT2wGi" name="DistortionVST">
     <GROUP id="{760A13DC-599E-03C3-BA88-3E0B2B8C88BD}" name="Source">
+      <GROUP id="{9F2CBA59-A752-B115-34C4-B14B411CB0DC}" name="Assets">
+        <FILE id="hdPI3x" name="Background.png" compile="0" resource="1" file="Source/Assets/Background.png"/>
+      </GROUP>
       <FILE id="zwEt9r" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="p5Uj7j" name="PluginProcessor.h" compile="0" resource="0"

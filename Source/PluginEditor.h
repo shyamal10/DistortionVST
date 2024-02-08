@@ -29,10 +29,10 @@ public:
         
         juce::Rectangle<float> dialArea (rx, ry, diameter, diameter);
         
-        g.setColour(juce::Colour(0xff6D97F2)); //Sets colour of the dial fill
+        g.setColour(juce::Colour(0xFFFEF7F5)); //Sets colour of the dial fill
         g.fillEllipse(dialArea);
         
-        g.setColour(juce::Colours::white);
+        g.setColour(juce::Colour(0xFF28282B));
         
         //Adding tick mark in dial
         juce::Path dialTick;
@@ -63,8 +63,9 @@ private:
 
     OtherLookandFeel otherLookAndFeel;
     
-    juce::Slider driveKnob, rangeKnob, mixKnob, volumeKnob; // Visual slider components
+    juce::Image Background;
     
+    juce::Slider driveKnob, rangeKnob, mixKnob, volumeKnob; // Visual slider components
     
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>
     driveAttachment, rangeAttachment, mixAttachment, volumeAttachment;

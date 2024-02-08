@@ -41,7 +41,7 @@ DistortionVSTAudioProcessorEditor::DistortionVSTAudioProcessorEditor (Distortion
     rangeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "range", rangeKnob);
     mixAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "mix", mixKnob);
     volumeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "volume", volumeKnob);
-    
+    setResizable(true, true);
     setSize (600, 200);
 }
 
@@ -52,12 +52,16 @@ DistortionVSTAudioProcessorEditor::~DistortionVSTAudioProcessorEditor()
 //==============================================================================
 void DistortionVSTAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll(juce::Colour(0xFF28282B));
+    //g.fillAll(juce::Colour(0xFF28282B)); //Matte Black Colour
+    Background = juce::ImageCache::getFromMemory(BinaryData::Background_png, BinaryData::Background_pngSize);
+    g.drawImageWithin(Background, 0, 0, getWidth(), getHeight(), juce::RectanglePlacement::stretchToFit);
+    
     
     g.setColour(juce::Colours::whitesmoke);
     g.setFont(juce::Font("Avenir Next Condensed", 20.f, 1));
     
     //Set labels
+    g.drawText("DistortionVST", ((getWidth() / 5) * 4.5) - (100/ 2), (getHeight() / 2) + 40, 100, 100, juce::Justification::centred, false);
     g.drawText("Drive", ((getWidth() / 5) * 1) - (100/ 2 ), (getHeight() / 2) + 15, 100, 100, juce::Justification::centred, false);
     g.drawText("Range", ((getWidth() / 5) * 2) - (100/ 2 ), (getHeight() / 2) + 15, 100, 100, juce::Justification::centred, false);
     g.drawText("Mix", ((getWidth() / 5) * 3) - (100/ 2 ), (getHeight() / 2) + 15, 100, 100, juce::Justification::centred, false);

@@ -8,7 +8,7 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.DistortionVST</string>
+    <string>com.ShyamLLC.DistortionVST</string>
     <key>CFBundleName</key>
     <string>DistortionVST</string>
     <key>CFBundleDisplayName</key>
