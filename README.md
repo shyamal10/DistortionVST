@@ -20,7 +20,7 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">View Demo</a>
+    <a href="https://youtu.be/ExLxL59DDWU">View Demo</a>
     ·
     <a href="https://github.com/shyamal10/DistortionVST/issues">Report Bug</a>
     ·
@@ -34,18 +34,19 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Manual](#manual)
+  - [Setup](#setup)
   - [General](#general)
 - [Technical](#technical)
   - [Design Approach](#design-approach)
   - [Overview](#overview)
-    - [Mix](#Mix)
-    - [Drive and Range](#Drive-and-Range)
-    - [Digital Signal Procesing]()
+    - [Mix](#mix)
+    - [Drive and Range](#drive-and-range)
+    - [Digital Signal Processing](#digital-signal-processing)
 - [References](#references)
 
 ## Introduction
 
-This VST3/AU distortion plugin was developed with the aim of creating a high-quality distortion suitable for a diverse range of signals and applications. The minimalist GUI enhances usability and avoids screen clutter. The project served as a valuable learning experience, significantly advancing my understanding of digital signal processing and digital audio effects as well as the JUCE framework. Audio programming requires fast and effecient code as audio buffers are refreshed constantly, so this was a good learning experience for me. [A demonstration is available on YouTube.](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+This VST3/AU distortion plugin was developed with the aim of creating a high-quality distortion suitable for a diverse range of signals and applications. The minimalist GUI enhances usability and avoids screen clutter. The project served as a valuable learning experience, significantly advancing my understanding of digital signal processing and digital audio effects as well as the JUCE framework. Audio programming requires fast and effecient code as audio buffers are refreshed constantly, so this was a good learning experience for me. [A demonstration is available on YouTube.](https://youtu.be/ExLxL59DDWU)
 
 ## Features
 
@@ -57,6 +58,13 @@ This VST3/AU distortion plugin was developed with the aim of creating a high-qua
 - Volume
 
 ## Manual
+
+#### Setup
+
+1. Clone the repo
+2. Open the JUCER file if JUCE is already built
+3. Export file to XCode (MacOS) or VSCode(Windows)
+4. Build project for AU/VST3 Formats
 
 #### General
 
@@ -91,7 +99,7 @@ So instead of a hard limiting which distorts the signal in a harsh way, this fun
 
 A basic distortion diagram:
 
-![alt text](Documentation/Base-Diagram.png "Base Diagram")
+![alt text](images/flow.png "Base Diagram")
 
 Lets take a look at the components.
 
